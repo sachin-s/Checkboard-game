@@ -1,0 +1,15 @@
+h1 {
+    color: gray
+}
+#main{
+    
+    text-align: center;
+}
+table tr td button {
+    margin:5px;
+    width: 70px;
+    height:70px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: gray;
+}
