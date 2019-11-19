@@ -8,7 +8,7 @@ player2Color = 'blue';
 
 var colNum = 0;
 var rowNum = 0;
-
+$('#message').text(player1+' turn to play(red color)');
 
 $('td').click(function(){
     colNum = $(this).parent().children().index($(this));
@@ -17,13 +17,13 @@ $('td').click(function(){
 
     if(currentPlayer===1)
     {
-        $('#message').text(player1+' turn to play(red color)');
         currentPlayer *=-1;
         $('#checkboard').children().find('tr').eq(rowNum).find('td').eq(colNum).find('button').css('background-color',player1Color);
-    }else{
         $('#message').text(player2+' turn to play(blue color)');
+    }else{
         currentPlayer *=-1;
         $('#checkboard').children().find('tr').eq(rowNum).find('td').eq(colNum).find('button').css('background-color',player2Color);
+        $('#message').text(player1+' turn to play(red color)');
     }
 });
 $('#quitButton').click(function(){
